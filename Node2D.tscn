@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Node2D.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://sounds/high.wav" type="AudioStream" id=3]
+[ext_resource path="res://sounds/low.wav" type="AudioStream" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="leftDrum" type="Sprite" parent="."]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 150, 261 )
+texture = ExtResource( 2 )
+
+[node name="rightDrum" type="Sprite" parent="."]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 350, 261 )
+texture = ExtResource( 2 )
+
+[node name="high" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="low" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
